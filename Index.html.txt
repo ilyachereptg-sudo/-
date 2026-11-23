@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шиномонтаж на Мельниковской, 101 — Владивосток</title>
+  <style>
+    :root { --bg:#0f172a; --card:#1e293b; --text:#f8fafc; --muted:#94a3b8; --accent:#f97316; --green:#22c55e; --border:#334155; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; padding-bottom:84px; }
+    header { background:rgba(15,23,42,.95); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:50; }
+    .wrap { max-width:680px; margin:0 auto; padding:12px 16px; }
+    .brand { font-size:15px; font-weight:800; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+    .hours-badge { font-size:12px; color:var(--green); white-space:nowrap; }
+    .tabs { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; }
+    .tab { background:var(--card); border:1px solid var(--border); color:var(--muted); padding:10px 4px; border-radius:10px; font-size:13px; font-weight:600; cursor:pointer; text-align:center; user-select:none; }
+    .tab.active, .tab:hover { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .page { display:none; padding-top:8px; }
+    .page.active { display:block; }
+    .badges { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+    .badge { display:inline-flex; align-items:center; gap:6px; background:var(--card); border:1px solid var(--border); padding:5px 10px; border-radius:999px; font-size:13px; }
+    .dot { width:8px; height:8px; border-radius:50%; background:var(--green); }
+    h1 { font-size:25px; line-height:1.2; font-weight:800; margin-bottom:10px; }
+    h2 { font-size:22px; font-weight:800; margin-bottom:10px; }
+    .sub { color:var(--muted); font-size:15px; margin-bottom:18px; }
+    .card, .item { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px; margin-bottom:12px; }
+    .phone { display:block; font-size:24px; font-weight:800; color:var(--text); text-decoration:none; margin-bottom:4px; }
+    .addr { color:var(--muted); font-size:14px; margin-bottom:14px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .btn { display:flex; align-items:center; justify-content:center; padding:13px; border-radius:12px; font-size:15px; font-weight:700; text-decoration:none; color:#fff; background:#334155; cursor:pointer; border:none; }
+    .btn.main { background:var(--accent); }
+    .mini strong { display:block; font-size:17px; color:var(--accent); margin-bottom:4px; }
+    .mini span { font-size:13px; color:var(--muted); }
+    .top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; font-weight:700; font-size:16px; margin-bottom:6px; }
+    .price { color:var(--accent); font-size:13px; white-space:nowrap; }
+    .desc { font-size:14px; color:var(--muted); line-height:1.45; }
+    ul { list-style:none; display:flex; flex-direction:column; gap:10px; font-size:14px; }
+    li::before { content:"✓ "; color:var(--green); font-weight:bold; }
+    .map-note { margin-top:14px; padding:14px; border:1px dashed var(--border); border-radius:12px; font-size:13px; color:var(--muted); text-align:center; }
+    footer { text-align:center; color:var(--muted); font-size:12px; margin-top:20px; padding-top:14px; border-top:1px solid var(--border); }
+    .call-fix { position:fixed; bottom:14px; left:16px; right:16px; max-width:648px; margin:0 auto; background:var(--green); color:#052e16; text-align:center; padding:14px; border-radius:14px; font-size:16px; font-weight:800; text-decoration:none; box-shadow:0 10px 25px rgba(0,0,0,.5); z-index:100; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <span>Шиномонтаж <span id="b-short"></span></span>
+      <span class="hours-badge">● <span class="h-txt"></span></span>
+    </div>
+    <nav class="tabs">
+      <div class="tab active" data-page="home">Главная</div>
+      <div class="tab" data-page="services">Услуги</div>
+      <div class="tab" data-page="reviews">Отзывы</div>
+      <div class="tab" data-page="contacts">Контакты</div>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="p-home" class="page active">
+    <div class="badges">
+      <span class="badge"><span class="dot"></span> Ежедневно <span class="h-txt"></span></span>
+      <span class="badge">★ <span class="r-txt"></span> на Яндексе</span>
+    </div>
+    <h1>Шиномонтаж и продажа шин б/у во Владивостоке</h1>
+    <p class="sub">Шиномонтаж, ремонт порезов, замена колодок и продажа автошин б/у на Мельниковской, 101.</p>
+    <div class="card">
+      <a href="tel:+79024856133" class="phone p-link"></a>
+      <div class="addr a-txt"></div>
+      <div class="grid">
+        <a href="tel:+79024856133" class="btn main">Позвонить</a>
+        <button type="button" class="btn" data-page="services">Все услуги</button>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card mini"><strong>4.8 ★</strong><span class="rc-txt"></span></div>
+      <div class="card mini"><strong>Способы оплаты</strong><span>Наличный расчёт, оплата через банк, перевод с карты</span></div>
+    </div>
+  </section>
+
+  <section id="p-services" class="page">
+    <h2>Услуги и товары</h2>
+    <p class="sub">Точную стоимость под размер колёс и наличие шин б/у уточняйте по телефону.</p>
+    <div id="list-services"></div>
+  </section>
+
+  <section id="p-reviews" class="page">
+    <h2>Отзывы водителей</h2>
+    <p class="sub">Оценки автомобилистов Владивостока на основе карточек в Яндексе и 2ГИС.</p>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)">
+        <div><strong>Рейтинг мастерской</strong><br><span style="font-size:13px;color:var(--muted)" class="rc-txt"></span></div>
+        <div style="font-size:26px;font-weight:800;color:#facc15"><span class="r-txt"></span> ★</div>
+      </div>
+      <ul id="list-reviews"></ul>
+    </div>
+  </section>
+
+  <section id="p-contacts" class="page">
+    <h2>Контакты и проезд</h2>
+    <p class="sub" id="l-txt"></p>
+    <div class="card">
+      <a href="tel:+79024856133" class="phone p-link"></a>
+      <div class="addr a-txt"></div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:14px">Способы оплаты: наличный расчёт, оплата через банк, перевод с карты.</div>
+      <div class="grid">
+        <a id="ya" href="#" target="_blank" rel="noopener" class="btn main">Яндекс Карты</a>
+        <a id="gis" href="#" target="_blank" rel="noopener" class="btn">Открыть в 2ГИС</a>
+      </div>
+      <div class="map-note">Карта откроется в новой вкладке по кнопкам выше.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="a-txt"></div>
+    <div style="margin-top:4px">Ежедневно <span class="h-txt"></span> • <span class="p-txt"></span></div>
+  </footer>
+</main>
+
+<a href="tel:+79024856133" class="call-fix" id="f-call"></a>
+
+<script>
+const CFG = {
+  short: "Мельниковская, 101",
+  addr: "г. Владивосток, ул. Мельниковская, 101 (1 этаж)",
+  land: "2 минуты пешком или 200 метров от остановки «Некрасовская» до автосервиса",
+  phone: "+7 (902) 485-61-33",
+  tel: "tel:+79024856133",
+  hours: "09:00 – 20:00",
+  rating: "4.8",
+  revCnt: "60 оценок в Яндексе • 83 в 2ГИС",
+  ya: "https://yandex.ru/maps/org/shinomontazh/55727018132/?ll=131.906757%2C43.134500&z=15",
+  gis: "https://2gis.ru/vladivostok/search/%D0%9C%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20101%20%D1%88%D0%B8%D0%BD%D0%BE%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%20/firm/70000001037772001/131.906706%2C43.134719/tab/info?m=131.906706%2C43.134719%2F16",
+  services: [
+    ["Шиномонтаж", "Снятие и установка колёс, перебортировка, балансировка и проверка давления."],
+    ["Ремонт порезов", "Устранение проколов и порезов автомобильных шин с проверкой герметичности."],
+    ["Замена колодок", "Замена изношенных тормозных колодок на легковых автомобилях."],
+    ["Продажа автошин б/у", "Подбор б/у резины по размеру и сезону из наличия на месте."]
+  ],
+  reviews: [
+    "Быстрая работа без долгого ожидания",
+    "Аккуратная переобувка и балансировка колёс",
+    "Удобная оплата: наличный расчёт, оплата через банк, перевод с карты"
+  ]
+};
+
+document.getElementById("b-short").textContent = CFG.short;
+document.getElementById("l-txt").textContent = CFG.land;
+document.getElementById("gis").href = CFG.gis;
+document.getElementById("ya").href = CFG.ya;
+document.getElementById("f-call").textContent = "Позвонить: " + CFG.phone;
+document.querySelectorAll(".h-txt").forEach(e => e.textContent = CFG.hours);
+document.querySelectorAll(".r-txt").forEach(e => e.textContent = CFG.rating);
+document.querySelectorAll(".rc-txt").forEach(e => e.textContent = CFG.revCnt);
+document.querySelectorAll(".a-txt").forEach(e => e.textContent = CFG.addr);
+document.querySelectorAll(".p-txt").forEach(e => e.textContent = CFG.phone);
+document.querySelectorAll(".p-link").forEach(e => e.textContent = CFG.phone);
+
+document.getElementById("list-services").innerHTML = CFG.services.map(s =>
+  `<div class="item"><div class="top"><span>${s[0]}</span><span class="price">По запросу</span></div><div class="desc">${s[1]}</div></div>`
+).join("");
+document.getElementById("list-reviews").innerHTML = CFG.reviews.map(r => `<li>${r}</li>`).join("");
+
+function showPage(id) {
+  document.querySelectorAll(".page").forEach(p => p.classList.toggle("active", p.id === "p-" + id));
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.page === id));
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.querySelectorAll("[data-page]").forEach(el => {
+  el.addEventListener("click", () => showPage(el.dataset.page));
+});
+</script>
+</body>
+</html>
